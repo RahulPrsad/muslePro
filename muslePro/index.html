@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IronFuel — Protein That Earns Its Keep</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a href="#top" class="logo" id="site-logo">IRON<span>FUEL</span></a>
+        <nav class="main-nav" id="main-nav">
+          <a href="#categories">Shop</a>
+          <a href="#featured">Bestsellers</a>
+          <a href="#checkout">Pay with ETH</a>
+          <a href="#why">Why Us</a>
+          <a href="#footer">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button id="cart-btn" class="btn btn-ghost cart-btn" aria-haspopup="dialog" aria-controls="cart-drawer">
+            🛒 Cart <span id="cart-count" class="cart-count">0</span>
+          </button>
+          <button id="wallet-btn" class="btn btn-ghost">🦊 Connect Wallet</button>
+          <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CART DRAWER -->
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+    <aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" hidden>
+      <div class="cart-drawer-head">
+        <h3>Your Cart</h3>
+        <button id="cart-close" class="cart-close" aria-label="Close cart">✕</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-drawer-foot">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <span id="cart-total-value">₹0</span>
+        </div>
+        <a href="#checkout" id="cart-checkout-btn" class="btn btn-primary cart-checkout-btn">Go to checkout</a>
+      </div>
+    </aside>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Sourced clean · Tested batch by batch</p>
+            <h1>
+              PUT SOMETHING<br />
+              BEHIND THE <span class="accent">REP</span>
+            </h1>
+            <p class="hero-sub" id="hero-tagline">
+              Whey, isolate and mass gainers built around one number that actually
+              matters: grams of protein per rupee.
+            </p>
+            <div class="hero-cta">
+              <a href="#featured" class="btn btn-primary">Shop Protein</a>
+              <a href="#macro-panel" class="btn btn-outline">See the macros</a>
+            </div>
+          </div>
+
+          <div class="hero-panel" id="macro-panel">
+            <div class="panel-header">
+              <span class="dot"></span> LIVE SCOOP READOUT
+            </div>
+            <div class="macro-row">
+              <span class="macro-label">Protein</span>
+              <span class="macro-value">24<small>g</small></span>
+            </div>
+            <div class="macro-row">
+              <span class="macro-label">Carbs</span>
+              <span class="macro-value">3<small>g</small></span>
+            </div>
+            <div class="macro-row">
+              <span class="macro-label">Fat</span>
+              <span class="macro-value">1<small>g</small></span>
+            </div>
+            <div class="macro-row">
+              <span class="macro-label">Per scoop</span>
+              <span class="macro-value">30<small>g</small></span>
+            </div>
+            <div class="panel-footer">Whey Gold — Double Rich Chocolate</div>
+          </div>
+        </div>
+        <div class="hero-slash" aria-hidden="true"></div>
+      </section>
+
+      <!-- TICKER -->
+      <div class="ticker">
+        <div class="ticker-track">
+          <span>26g PROTEIN / SCOOP</span>
+          <span>ZERO ADDED SUGAR</span>
+          <span>3RD-PARTY LAB TESTED</span>
+          <span>5.5g BCAA / SERVING</span>
+          <span>1000+ 5★ REVIEWS</span>
+          <span>26g PROTEIN / SCOOP</span>
+          <span>ZERO ADDED SUGAR</span>
+          <span>3RD-PARTY LAB TESTED</span>
+          <span>5.5g BCAA / SERVING</span>
+          <span>1000+ 5★ REVIEWS</span>
+        </div>
+      </div>
+
+      <!-- CATEGORIES -->
+      <section class="categories" id="categories">
+        <div class="wrap">
+          <h2 class="section-title">Pick your stack</h2>
+          <div class="cat-grid">
+            <a class="cat-card" href="#featured">
+              <svg viewBox="0 0 48 48" class="cat-icon"><rect x="14" y="10" width="20" height="30" rx="3"/><rect x="18" y="4" width="12" height="8" rx="2"/></svg>
+              <h3>Whey Concentrate</h3>
+              <p>Everyday muscle fuel. Best value per gram.</p>
+            </a>
+            <a class="cat-card" href="#featured">
+              <svg viewBox="0 0 48 48" class="cat-icon"><circle cx="24" cy="26" r="16"/><rect x="19" y="4" width="10" height="8" rx="2"/></svg>
+              <h3>Isolate</h3>
+              <p>Fast-absorbing, low lactose, lean macros.</p>
+            </a>
+            <a class="cat-card" href="#featured">
+              <svg viewBox="0 0 48 48" class="cat-icon"><rect x="8" y="14" width="32" height="26" rx="4"/><path d="M8 22h32"/></svg>
+              <h3>Mass Gainer</h3>
+              <p>High-calorie blend for hard-gainers.</p>
+            </a>
+            <a class="cat-card" href="#featured">
+              <svg viewBox="0 0 48 48" class="cat-icon"><rect x="6" y="18" width="36" height="12" rx="6"/></svg>
+              <h3>Bars &amp; Snacks</h3>
+              <p>Protein on the move, no shaker needed.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PRODUCTS -->
+      <section class="featured" id="featured">
+        <div class="wrap">
+          <div class="section-head-row">
+            <h2 class="section-title">Bestsellers</h2>
+            <p class="section-note">Prices shown in <span id="currency-note">₹</span> — set via <code>.env</code></p>
+          </div>
+          <div class="product-grid" id="product-grid">
+            <!-- product cards injected by main.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY US -->
+      <section class="why" id="why">
+        <div class="wrap why-grid">
+          <div class="why-card">
+            <span class="why-num">01</span>
+            <h3>Batch-tested, not just batch-made</h3>
+            <p>Every lot is lab-verified for label-accurate protein content and screened for banned substances.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-num">02</span>
+            <h3>Shipped cold-chain safe</h3>
+            <p>Sealed tubs, tamper-proof foil, and padded shipping so nothing arrives dented or clumped.</p>
+          </div>
+          <div class="why-card">
+            <span class="why-num">03</span>
+            <h3>Macros before marketing</h3>
+            <p>We lead every product page with the numbers, not the hype. You compare grams, we earn the sale.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ETH CHECKOUT -->
+      <section class="checkout" id="checkout">
+        <div class="wrap checkout-inner">
+          <div class="checkout-copy">
+            <p class="eyebrow">Web3 checkout · Test network</p>
+            <h2>PAY WITH <span class="accent">ETH</span></h2>
+            <p class="hero-sub">
+              Connect MetaMask and send a test payment on the Sepolia network — no real
+              funds involved. Good for demoing wallet-based checkout before wiring up
+              a production payment processor.
+            </p>
+            <ol class="checkout-steps">
+              <li>Install the MetaMask browser extension</li>
+              <li>Switch to the Sepolia test network (we'll prompt you)</li>
+              <li>Click <strong>Connect Wallet</strong>, then <strong>Pay with MetaMask</strong></li>
+              <li>Confirm the transaction and view it on the block explorer</li>
+            </ol>
+          </div>
+
+          <div class="hero-panel checkout-panel">
+            <div class="panel-header"><span class="dot"></span> WALLET STATUS</div>
+
+            <div class="wallet-row">
+              <span class="macro-label">Status</span>
+              <span class="macro-value" id="wallet-status-value" style="font-size:1rem">Not connected</span>
+            </div>
+            <div class="wallet-row">
+              <span class="macro-label">Network</span>
+              <span class="macro-value" id="wallet-network-value" style="font-size:1rem">—</span>
+            </div>
+            <div class="wallet-row">
+              <span class="macro-label">Cart total</span>
+              <span class="macro-value" id="checkout-cart-total" style="font-size:1rem">₹0</span>
+            </div>
+            <div class="wallet-row">
+              <span class="macro-label">Checkout amount</span>
+              <span class="macro-value" id="checkout-amount" style="font-size:1rem">0.0005 ETH</span>
+            </div>
+
+            <button id="pay-btn" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:18px;" disabled>
+              Connect wallet first
+            </button>
+            <p id="checkout-note" class="checkout-note"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="newsletter">
+        <div class="wrap newsletter-inner">
+          <div>
+            <h2>Get restock alerts</h2>
+            <p>One email when your flavor comes back in stock. No spam, no upsell chains.</p>
+          </div>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" required placeholder="you@example.com" aria-label="Email address" />
+            <button type="submit" class="btn btn-primary">Notify me</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <a href="#top" class="logo">IRON<span>FUEL</span></a>
+          <p class="footer-tag">Fuel the rep that matters.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#categories">Whey</a>
+          <a href="#categories">Isolate</a>
+          <a href="#categories">Mass Gainer</a>
+          <a href="#categories">Bars</a>
+        </div>
+        <div class="footer-col" id="footer-contact">
+          <h4>Contact</h4>
+          <a id="footer-email" href="#">hello@ironfuel.example</a>
+          <a id="footer-phone" href="#">+91 90000 00000</a>
+          <a id="footer-insta" href="#" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <p>© <span id="footer-year"></span> <span id="footer-sitename">IronFuel</span>. Educational demo project — not a real store.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
